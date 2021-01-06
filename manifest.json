@@ -1,0 +1,25 @@
+{
+  "name": "Stonks up!",
+  "version": "1.0",
+  "description": "Trading/investing helpers",
+  "manifest_version": 2,
+  "icons": {
+    "16": "/icons/icon16.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  "permissions": ["webRequest", "webRequestBlocking", "*://trader.degiro.nl/*"],
+  "background": {
+    "page": "src/index.html",
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts": [
+    {
+      "match_about_blank": true,
+      "matches": ["*://trader.degiro.nl/*"],
+      "js": ["src/content/index.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
