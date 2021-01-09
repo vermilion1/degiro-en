@@ -1,7 +1,7 @@
 {
-  "name": "Stonks up!",
+  "name": "Degiro in English",
   "version": "1.0",
-  "description": "Trading/investing helpers",
+  "description": "Enables English interface on Degiro stock trading platform",
   "manifest_version": 2,
   "icons": {
     "16": "/icons/icon16.png",
@@ -12,14 +12,5 @@
   "background": {
     "page": "src/index.html",
     "persistent": true
-  },
-  "content_security_policy": "script-src 'self'; object-src 'self'",
-  "content_scripts": [
-    {
-      "match_about_blank": true,
-      "matches": ["*://trader.degiro.nl/*"],
-      "js": ["src/content/index.js"],
-      "run_at": "document_start"
-    }
-  ]
+  }
 }
