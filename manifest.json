@@ -11,12 +11,7 @@
   "browser_action": {
     "default_popup": "/src/popup/popup.html"
   },
-  "permissions": [
-    "storage",
-    "webRequest",
-    "webRequestBlocking",
-    "*://trader.degiro.nl/*"
-  ],
+  "permissions": ["webRequest", "webRequestBlocking", "*://trader.degiro.nl/*"],
   "background": {
     "page": "/src/index.html",
     "persistent": true
