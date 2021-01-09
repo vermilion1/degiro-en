@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #344563;
+  font-size: 12px;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+h3 {
+  margin: 0;
+}
+
+.container {
+  width: 350px;
+}
+
+.status-title {
+  margin: 10px 0;
+}
+
+.intro {
+  margin: 10px 0;
+  padding: 10px;
+  background: #eaf7ff;
+}
+
+.contents,
+.tabs {
+  margin: 0;
+  padding: 0;
+}
+
+.contents li {
+  display: none;
+}
+
+.tabs li {
+  list-style: none;
+  padding: 6px;
+  display: inline-block;
+  margin-right: 3px;
+  background: #f1f1f1;
+  font-weight: bold;
+  color: #696969; /* ( ͡° ͜ʖ ͡°) */
+  cursor: pointer;
+}
+
+[data-selected="BTC"] li[data-symbol="BTC"],
+[data-selected="ETH"] li[data-symbol="ETH"],
+[data-selected="LTC"] li[data-symbol="LTC"] {
+  display: inline-block;
+}
+
+[data-selected="BTC"] .tabs li[data-symbol="BTC"],
+[data-selected="ETH"] .tabs li[data-symbol="ETH"],
+[data-selected="LTC"] .tabs li[data-symbol="LTC"] {
+  background: #5e6b86;
+  color: #fff;
+}
+
+.contents-box {
+  display: flex;
+}
+
+.contents-column {
+  margin-top: 10px;
+}
+
+.contents-column + .contents-column {
+  margin-left: 10px;
+}
+
+.qr {
+  width: 100px;
+}
+
+.instructions {
+  margin: 10px 0;
+  min-height: 42px;
+}
