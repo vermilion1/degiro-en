@@ -1,4 +1,4 @@
-# Degiro in English
+# Degiro in English (Chrome extension)
 
 Enables English interface on Degiro stock trading platform.
 
