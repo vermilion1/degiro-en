@@ -3,7 +3,7 @@
 }
 
 body {
-  color: #344563;
+  color: #111;
   font-size: 12px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
@@ -44,19 +44,18 @@ h3 {
   margin-right: 3px;
   background: #f1f1f1;
   font-weight: bold;
-  color: #696969; /* ( ͡° ͜ʖ ͡°) */
   cursor: pointer;
 }
 
 [data-selected="BTC"] li[data-symbol="BTC"],
 [data-selected="ETH"] li[data-symbol="ETH"],
-[data-selected="LTC"] li[data-symbol="LTC"] {
+[data-selected="BNB"] li[data-symbol="BNB"] {
   display: inline-block;
 }
 
 [data-selected="BTC"] .tabs li[data-symbol="BTC"],
 [data-selected="ETH"] .tabs li[data-symbol="ETH"],
-[data-selected="LTC"] .tabs li[data-symbol="LTC"] {
+[data-selected="BNB"] .tabs li[data-symbol="BNB"] {
   background: #5e6b86;
   color: #fff;
 }

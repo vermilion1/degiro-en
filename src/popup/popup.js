@@ -3,19 +3,19 @@ const settingsTemplate = ({ enabled }) => `
     <button data-toggle>${enabled ? "Disable" : "Enable"}</button>
 `;
 
-const tabTemplate = ({ name, symbol }) => `
-    ${symbol} ${name}
-`;
+const tabTemplate = ({ name }) => name;
 
-const contentsTemplate = ({ name, symbol, address }) => `
+const contentsTemplate = ({ name, address, symbol, network, instructions }) => `
     <div class="contents-box">
         <div class="contents-column">
             <img class="qr" src="/assets/qrs/${address}.png" alt="${name} address: ${address}" />
         </div>
         <div class="contents-column">
-            <h3>Donate ${name} to this address</h3>
+            <h3>Consider donating some ${symbol}</h3>
             <div class="instructions">
-                Scan the QR code or copy the address below into your wallet to send some ${name}
+                Up to you though ;)<br/>
+                Token standard: ${network}<br/>
+                ${instructions || ''}
             </div>
             <input type="text" value="${address}" />
             <button data-copy="${address}">Copy</button>
@@ -26,7 +26,7 @@ const contentsTemplate = ({ name, symbol, address }) => `
 const donationTemplate = (methods, selected) => `
     <div data-selected="${selected}">
         <div class="intro">
-            This extension is completely free but if you feel like you want to thank me for it -
+            This extension is completely free but if you feel like you want to thank me for it,
             below is the list of cryptocurrencies you may donate to cheer me up :)
         </div>
         <ul class="tabs">
@@ -58,17 +58,22 @@ const updateDonation = () => {
       {
         name: "Bitcoin",
         symbol: "BTC",
+        network: "BTC",
         address: "18DziL5jbpo8HFhw4jN6KxhSq65T5w18Sk",
       },
       {
         name: "Ethereum",
         symbol: "ETH",
+        network: "ERC20",
+        instructions: `P.S. Yep, same address as for BNB`,
         address: "0xd39e8091b0b1a1e537845d56f9429e82f6310764",
       },
       {
-        name: "Litecoin",
-        symbol: "LTC",
-        address: "LUtfLUDbhxHBTxMzYyKrNnTB8KxAuqyquT",
+        name: "Binance Coin",
+        symbol: "BNB",
+        network: "BEP20",
+        instructions: `P.S. Yep, same address as for ETH`,
+        address: "0xd39e8091b0b1a1e537845d56f9429e82f6310764",
       },
     ],
     selectedDonationMethod
