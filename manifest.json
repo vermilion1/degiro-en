@@ -1,6 +1,6 @@
 {
   "name": "Degiro in English",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Enables English interface on Degiro stock trading platform",
   "manifest_version": 2,
   "icons": {
@@ -11,7 +11,28 @@
   "browser_action": {
     "default_popup": "/src/popup/popup.html"
   },
-  "permissions": ["webRequest", "webRequestBlocking", "*://trader.degiro.nl/*"],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://trader.degiro.cz/*",
+    "*://trader.degiro.ch/*",
+    "*://trader.degiro.dk/*",
+    "*://trader.degiro.de/*",
+    "*://trader.degiro.es/*",
+    "*://trader.degiro.gr/*",
+    "*://trader.degiro.fr/*",
+    "*://trader.degiro.ie/*",
+    "*://trader.degiro.it/*",
+    "*://trader.degiro.nl/*",
+    "*://trader.degiro.co.no/*",
+    "*://trader.degiro.hu/*",
+    "*://trader.degiro.at/*",
+    "*://trader.degiro.pl/*",
+    "*://trader.degiro.pt/*",
+    "*://trader.degiro.fi/*",
+    "*://trader.degiro.se/*",
+    "*://trader.degiro.co.uk/*"
+  ],
   "background": {
     "page": "/src/index.html",
     "persistent": true
