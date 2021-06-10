@@ -1,6 +1,6 @@
 {
   "name": "Degiro in English",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Enables English interface on Degiro stock trading platform",
   "manifest_version": 2,
   "icons": {

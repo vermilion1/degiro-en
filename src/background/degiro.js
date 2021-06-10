@@ -1,16 +1,16 @@
 export const bootstrap = () => {
   chrome.webRequest.onBeforeRequest.addListener(
     ({ method, url }) => {
-      const defaultMessages =
-        "https://trader.degiro.nl/i18n/messages_default_default";
-
+      const urlInstance = new URL(url);
       if (
-        method?.toLowerCase() === "get" &&
-        url.startsWith("https://trader.degiro.nl/i18n/messages_") &&
-        url !== defaultMessages
+        method?.toLowerCase() === 'get' &&
+        urlInstance.hostname.includes('trader.degiro.') &&
+        urlInstance.pathname === '/translations/' &&
+        urlInstance.searchParams.get('language') != null
       ) {
+        urlInstance.searchParams.set('language', 'en');
         return {
-          redirectUrl: defaultMessages,
+          redirectUrl: urlInstance.toString(),
         };
       }
     },
